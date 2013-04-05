@@ -2,8 +2,13 @@
 
 
 
-<%= @articles.content %>
-</br>
+<% @articles.each do |article| %>
+    <li>
+      <%= article.content %>
+      <%= link_to "remove", article , :confirm => "esti sestios", :method => :delete %>
+    </li>
 
-<%= @articles.title %>
-<%= @articles.id %>
+<% end %>
+
+
+

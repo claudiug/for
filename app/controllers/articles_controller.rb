@@ -2,8 +2,11 @@ class ArticlesController < ApplicationController
 
 
   def index
-
-    @articles = Article.last
-
+    @articles = Article.last_10
   end
+
+
+
+
+
 end
